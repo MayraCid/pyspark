@@ -13,16 +13,19 @@ if __name__ == "__main__":
         .master("local[*]") \
         .getOrCreate()
 
-    #Lectura del archivo csv en un DataFrame
-    Udemy_DF = spark.read.csv("C://Users//mayra.cid//Documents//Udemy_courses_Dataset//Course_info.csv")
+    #Lectura del archivo csv en un DataFrame, donde indicamos
+    #que tome como argumentos la segunda fila o de lo contrario
+    #los argumentos serían _c0, _c1, etc.
+    Udemy_DF = spark.read.option("header", True)\
+        .csv("C://Users//mayra.cid//Documents//Udemy_courses_Dataset//Course_info.csv")
 
     #Schema del CSV
-    Udemy_DF.printSchema()
-    print(Udemy_DF.schema)
+    #Udemy_DF.printSchema()
+    #print(Udemy_DF.schema) #El que es más útil
 
 
     #Tres renglones del DataFrame
-    #Udemy_DF.show(3)
+    Udemy_DF.show(3)
 
     #Número de renglones
     #print("El número de filas es:", Udemy_DF.count())
