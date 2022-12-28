@@ -36,7 +36,7 @@ if __name__ == "__main__":
 
     # find the aggregate count for California by filtering
     ca_count_mnm_df = (mnm_df.select("*")
-                       .where(mnm_df.State == 'CA', mnm_df.State =='TX') )
+                       .where(mnm_df.State == 'CA')
                        .groupBy("State", "Color")
                        .sum("Count")
                        .orderBy("sum(Count)", ascending=False))

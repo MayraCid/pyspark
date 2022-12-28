@@ -37,4 +37,4 @@ if __name__ == "__main__":
     blogs_df.show()
  # Print the schema used by Spark to process the DataFrame
     print(blogs_df.printSchema())
-    print(blogs_df.schema)
+    print(blogs_df.schema) #Es el mismo esquema de arriba pero en una sola linea

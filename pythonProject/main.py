@@ -20,4 +20,4 @@ if __name__ == "__main__":
     print("Aplication Completed")
 
 #Lo que hizo fue traer a pantalla
-#todo lo que esta en el archivo indicado.
+# lo que esta en el archivo indicado.
