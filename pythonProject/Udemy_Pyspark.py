@@ -60,6 +60,7 @@ if __name__ == "__main__":
         .withColumn("num_comments", col("num_comments").cast('int')) \
         .withColumn("num_lectures", col("num_lectures").cast('int')) \
         .withColumn("content_length_min", col("content_length_min").cast('int'))
+
     print(f"Execution time data chage: {time.time() - start_time}")
 
 
