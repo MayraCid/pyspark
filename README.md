@@ -1,2 +1,2 @@
-# pycharm
-Prueba de código
+# Ejercicios  Pyspark 
+Solución a diferentes ejercicios realizados en pyspark
